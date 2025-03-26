@@ -1,2 +1,32 @@
-# train-time
-To display train arrival time
+Train Time App
+アプリケーション概要
+最寄り駅からの東京方面の列車発車時刻をリアルタイムで表示するWebアプリケーション
+機能
+
+リアルタイムでの発車時刻表示
+次の2本の列車情報を表示
+発車までの残り時間を分・秒で表示
+土日のダイヤ判定
+
+環境要件
+
+Node.js v18以上
+npm v9以上
+
+セットアップ手順
+1. リポジトリのクローン
+bashコピーgit clone [リポジトリURL]
+cd train-time
+2. 依存関係のインストール
+bashコピーcd client
+npm install
+3. 開発サーバーの起動
+bashコピーnpm start
+今後の改善点
+
+実際の列車時刻APIとの連携
+より詳細な駅情報の追加
+レスポンシブデザインの強化
+
+ライセンス
+[適切なライセンスを記載]
