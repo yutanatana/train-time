@@ -24,10 +24,8 @@ const weekendSchedule = [
 ];
 
 const TrainTimeApp = () => {
-  const [currentTime, setCurrentTime] = useState<dayjs.Dayjs>(dayjs());
-  const [nextTrains, setNextTrains] = useState<
-    { destination: string; time: string; remainingTime?: string }[]
-  >([]);
+  const [currentTime, setCurrentTime] = useState(dayjs());
+  const [nextTrains, setNextTrains] = useState([]);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -51,7 +49,8 @@ const TrainTimeApp = () => {
           const seconds = Math.floor((diff % 60000) / 1000);
           
           return {
-            ...train,
+            destination: train.destination,
+            time: train.time, // Ensure the original time is preserved
             remainingTime: `あと${minutes}分${seconds}秒`
           };
         });
